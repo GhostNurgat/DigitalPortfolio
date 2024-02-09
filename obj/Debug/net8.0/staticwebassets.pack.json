@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\My projects\\C#\\DigitalPortfolio\\wwwroot\\icons\\portfolio_vmbi5dtnrw2u_512.png",
+      "PackagePath": "staticwebassets\\icons\\portfolio_vmbi5dtnrw2u_512.png"
+    },
+    {
       "Id": "D:\\My projects\\C#\\DigitalPortfolio\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

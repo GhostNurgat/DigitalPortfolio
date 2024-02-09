@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body class="overflow-auto bg-light">
+    <div class="container">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="~/icons/portfolio_vmbi5dtnrw2u_512.png" class="d-block mx-lg-auto img-fluid" alt="Иконка портфолио" width="256" />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="color: #7309AA;font-family: 'Nunito', sans-serif;">
+                    Digital Portfolio - портфолио для IT
+                </h1>
+                <p class="mb-4 lead pe-lg-5 text-light">
+                    Создавайте портфолио и резюме для поиска работ в IT.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a class="btn btn-primary btn-lg px-4 me-md-4" href="#">Начать</a>
+                    <a class="btn btn-outline-primary btn-lg px-4" href="#">Вход</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

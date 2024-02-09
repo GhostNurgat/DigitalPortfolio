@@ -140,3 +140,4 @@ D:\My projects\C#\DigitalPortfolio\bin\Debug\net8.0\runtimes\win\lib\net6.0\Syst
 D:\My projects\C#\DigitalPortfolio\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\My projects\C#\DigitalPortfolio\obj\Debug\net8.0\DigitalPortfolio.csproj.AssemblyReference.cache
 D:\My projects\C#\DigitalPortfolio\obj\Debug\net8.0\DigitalPortfolio.csproj.CopyComplete
+D:\My projects\C#\DigitalPortfolio\obj\Debug\net8.0\DigitalPortfolio.sourcelink.json
