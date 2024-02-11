@@ -1,0 +1,39 @@
+@model DigitalPortfolio.ViewModels.LoginViewModel;
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="~/icons/portfolio_vmbi5dtnrw2u_512.png" class="img-fluid" width="256" />
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" asp-controller="Account" asp-action="Login">
+                        <div class="mb-3">
+                            <label asp-for="UserName" class="form-label"></label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">&#64;</span>
+                                <input asp-for="UserName" type="text" class="form-control" placeholder="Имя пользователя" />
+                            </div>
+                            <span class="text-danger" asp-validation-for="UserName"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Введите пароль" />
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="RememberMe" class="form-label"></label>
+                            <input asp-for="RememberMe" type="checkbox" class="form-check-inline" />
+                        </div>
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <input type="submit" class="btn btn-primary" value="Войти" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -35,15 +35,30 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="btn-group" role="group">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Аккаунт
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-sm-end bg-dark">
-                            <li><a class="dropdown-item" href="#">Вход</a></li>
-                            <li><a class="dropdown-item" href="#">Зарегистрироваться</a></li>
-                        </ul>
-                    </div>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Аккаунт
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-sm-end bg-dark">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Login">Вход</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Register">Зарегистрироваться</a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @User.Identity.Name
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-sm-end bg-dark">
+                                <li><a class="dropdown-item" href="#">Мой профиль</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">Выход из системы</a></li>
+                            </ul>
+                        </div>
+                    }
                 </div>
             </div>
         </nav>

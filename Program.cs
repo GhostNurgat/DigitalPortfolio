@@ -13,6 +13,22 @@ builder.Services.AddDbContext<PortfolioContext>(options => {
 });
 builder.Services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<PortfolioContext>();
 
+builder.Services.ConfigureApplicationCookie(options => {
+    options.Cookie.Name = "AuthCookie";
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+});
+
+builder.Services.Configure<IdentityOptions>(options => {
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 5;
+
+    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
